@@ -1,0 +1,50 @@
+﻿@model InterviewMVC.Models.RootObject
+
+@{
+    ViewData["Title"] = "Itunes Results";
+}
+
+
+<div class="content" style="width: 65%; margin: auto; text-align: left;">
+    <h4>Results: @Html.DisplayFor(model => model.resultCount)</h4>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Artist ID
+                </th>
+                <th>
+                    Artist Name
+                </th>
+                <th>
+                    Artist Type
+                </th>
+                <th>
+                    Artist Link
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.results)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.artistId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.artistName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.artistType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.artistLinkUrl)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button style="text-align: center; margin: auto;" class="btn btn-primary" onclick="history.go(-1);">Go Back</button>
+</div>

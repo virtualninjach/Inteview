@@ -1,0 +1,20 @@
+﻿@model Inteview.ViewModels.RootObject
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Result Count: @Model.resultCount</h1>
+
+    <ul>
+            @foreach (var i in Model.results)
+            {
+
+                <li> @i.artistName </li>
+                <li> @i.primaryGenreName </li>
+
+            }
+        
+    </ul>
+</div>

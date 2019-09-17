@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Search Artist";
+}
+
+<div class="container" style="text-align: center; margin: auto; width: 65%; padding: 25px">
+    <form asp-controller="Itunes" asp-action="Index" method="get">
+        <div class="form-group">
+            <label for="id">Artist ID: </label>
+            <input type="number" name="id" class="form-control" placeholder="Artist Id: e.g., 909253" required/>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Search Artist</button>
+    </form>
+</div>

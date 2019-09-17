@@ -1,0 +1,17 @@
+﻿@model  ItunesInput
+    <html>
+    <body>
+
+     
+        @using (Html.BeginForm("Index", "Itunes", FormMethod.Post))
+        {
+            @Html.TextBoxFor(model => model.Id)
+            @Html.ValidationMessageFor(model => model.Id)
+            <button type="submit">Search</button>
+        }
+        
+
+
+    </body>
+    </html>
+        
